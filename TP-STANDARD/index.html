@@ -12,8 +12,6 @@
 <div id="root"></div>
 
 </html>
-<script></script>
-<!-- <script src="./components/table.js" type="text/babel"></script> -->
 
 <script type="text/babel">
 
@@ -23,10 +21,7 @@
         state = {
             Task: "",
             data: [],
-            StoreData: []
         }
-
-
         componentDidMount() {
             axios.get("http://127.0.0.1:8000/api/task")
                 .then(res => {
@@ -37,11 +32,6 @@
                     })
                 })
         }
-
-
-
-
-
         handleChange = (e) => {
             console.log(e.target.value)
             this.setState({
@@ -57,14 +47,12 @@
                     console.log(res.data);
 
                 })
-                .then((res) => alert("add success"));
             window.location.reload(false);
         }
 
         handleDelete = (id) => {
             axios.delete("http://127.0.0.1:8000/api/task/delete/" + id)
                 .then((res) => {
-                    alert("add hass been deleted")
                     window.location.reload(false);
                 })
         }
@@ -83,7 +71,7 @@
 
 
                     <div class="container">
-                        <div class="row col-md-12 col-md-offset-2 custyle">
+                        <div class="row col-md-12 col-md-offset-2">
                             <table class="table table-striped tablo">
                                 <thead>
                                     <tr>
@@ -93,10 +81,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {this.state.data.map((task) => (
-
-
-
+                                    {this.state.data.map(task => (
                                         <tr key={task.id}>
                                             <td>{task.id}</td>
                                             <td>{task.Task}</td>
