@@ -1,0 +1,26 @@
+.tablo {
+    /* border: 1px solid #ccc; */
+    padding: 5px;
+    margin: 5% 0;
+    /* box-shadow: 3px 3px 2px #ccc; */
+    transition: 0.5s;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form>button {
+    margin-top: 37px;
+}
+
+.input {
+    margin-left: 383px;
+    margin-top: 39px;
+}
+
+.btn {
+    margin-inline-start: 10px;
+}
